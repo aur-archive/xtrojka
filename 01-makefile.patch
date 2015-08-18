@@ -1,0 +1,30 @@
+diff -aur xtrojka123.orig/Makefile xtrojka123/Makefile
+--- xtrojka123.orig/Makefile	1996-07-28 00:05:03.000000000 +0600
++++ xtrojka123/Makefile	2012-05-16 17:58:33.224755463 +0600
+@@ -10,11 +10,11 @@
+ #					xtrojka version (do not change!)
+ VERSION=123
+ #					where to put the binary
+-TARGET_DIR=/usr/games
++TARGET_DIR=/usr/bin
+ #					where to put the manpage
+-MANDIR=/usr/local/man/man6
++MANDIR=/usr/share/man/man6
+ #					the location of the highscorefile
+-HSFILE=/fill_in_your_scorefile
++HSFILE=/var/lib/xtrojka/xtrojka.score
+ #					your favourite packer
+ COMPRESS=gzip -v9
+ #					your favourite c-compiler
+diff -aur xtrojka123.orig/xtrojka.man xtrojka123/xtrojka.man
+--- xtrojka123.orig/xtrojka.man	1996-07-28 00:05:04.000000000 +0600
++++ xtrojka123/xtrojka.man	2012-05-16 17:58:33.224755463 +0600
+@@ -94,7 +94,7 @@
+ 
+ .SH FILES
+ .TP 15
+- __SCOREDIR__
++ /var/lib/xtrojka/xtrojka.score
+ The 
+ .IR xtrojka
+ highscore file
